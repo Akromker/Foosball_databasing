@@ -16,28 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `player`
+-- Table structure for table `sports_management`
 --
 
-DROP TABLE IF EXISTS `player`;
+DROP TABLE IF EXISTS `sports_management`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `player` (
-  `PlayerID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(25) NOT NULL,
-  `Age` int NOT NULL,
-  `Matches` int NOT NULL,
-  PRIMARY KEY (`PlayerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `sports_management` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) NOT NULL,
+  `Surname` varchar(45) NOT NULL,
+  `Sport` varchar(45) NOT NULL,
+  `Team` varchar(45) NOT NULL,
+  `Username` varchar(45) NOT NULL,
+  `Password` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID_UNIQUE` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `player`
+-- Dumping data for table `sports_management`
 --
 
-LOCK TABLES `player` WRITE;
-/*!40000 ALTER TABLE `player` DISABLE KEYS */;
-/*!40000 ALTER TABLE `player` ENABLE KEYS */;
+LOCK TABLES `sports_management` WRITE;
+/*!40000 ALTER TABLE `sports_management` DISABLE KEYS */;
+INSERT INTO `sports_management` VALUES (1,'Alex','Kromker','Soccer','U_17','Akromker','123'),(2,'Sherry','Chungus','Soccer','U_16B','SChungus','123'),(3,'Sherry','Chungus','Soccer','U_16B','SChungus','123'),(4,'Jenny','Bond','Certified fool','U_16B','BondJBond','123'),(5,'Jerry','Black','Certified pain in the ass','Bryce\'s','JBlack','123');
+/*!40000 ALTER TABLE `sports_management` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-30 16:10:14
+-- Dump completed on 2020-07-22 15:06:29

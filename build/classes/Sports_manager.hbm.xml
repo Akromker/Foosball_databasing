@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+    <class name = "Foosball.Sports_manager" table = "foosball.sports_management">
+      
+        <meta attribute = "class-description">
+            This class contains the sports manager's details. 
+        </meta>
+      
+        <id name="ID" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+ 
+        <property name = "name" column = "Name" type = "string"/>
+        <property name = "surname" column = "Surname" type = "string"/>
+        <property name = "sport" column = "Sport" type = "string"/>
+        <property name = "team" column = "Team" type = "string"/>
+        <property name = "Uname" column = "Username" type = "string"/>
+        <property name = "Pswd" column = "Password" type = "string"/>
+
+    </class>
+</hibernate-mapping>
